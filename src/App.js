@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { useState, useEffect } from 'react'
 import Active from '../src/components/Active'
 import Listener from './components/Listener' 
 
