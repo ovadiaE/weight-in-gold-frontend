@@ -1,4 +1,4 @@
- import {useEffect, useState, useRef} from 'react'
+ import {useEffect} from 'react'
  import axios from 'axios'
  import Marquee from "react-fast-marquee";
  import './Listener.css'
@@ -6,29 +6,30 @@
 
  
 const Listener = ({goldValue, setGoldValue, setShowWeightInGold, shouldShow}) => {
-    const fetchGoldValue = async () => {
-        try {
-            const response = await axios.get(`https://weight-in-gold.herokuapp.com/api/v1/weightingold`)
-            const data = await response
-            setGoldValue(()=>data.data.value)
-            console.log('gotten', data.data.value)
-        } 
-        catch (error) {
-           console.log(error)
-        }
-   }
+
 
     useEffect(() => {
+        const fetchGoldValue = async () => {
+            try {
+                const response = await axios.get(`https://weight-in-gold.herokuapp.com/api/v1/weightingold`)
+                const data = await response
+                setGoldValue(()=>data.data.value)
+                console.log('gotten', data.data.value)
+            } 
+            catch (error) {
+               console.log(error)
+            }
+       }
         const interval = setInterval(() => {
             fetchGoldValue()
         }, 1000);
         return () => clearInterval(interval);
-      }, []);
+      }, [setGoldValue]);
 
     useEffect(() => {
-        if (goldValue == 0) return
+        if (goldValue === 0) return
         setShowWeightInGold(true)
-    }, [goldValue])
+    }, [goldValue, setShowWeightInGold])
 
     if (!shouldShow) return <></>
     const display = () => (
