@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+.body-listener{
+    height: 96vh;
+    width: 97vw;
+    background-color: #FFA500;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.tag{
+    color: Purple;
+    font-size: 55px;
+    font-weight: 400;
+    margin-top: 200px;
+}
+
+.footer-wrapper-listener{ 
+    height: 100px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between
+}
+
+.details-listener{
+    color: purple;
+    font-weight: 700;
+    margin-top: 90px;
+    width: 250px;
+    height: 120px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-footer-listener{
+    margin-top: 20px
+}
+
+.QR{
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 250px;
+    height: 120px;
+    margin-top: 90px;
+}
+
+.botton-tag-listener{
+    margin-top: 40px;
+    border: 1px solid red
+}
