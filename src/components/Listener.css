@@ -2,7 +2,7 @@ body{
     background-color: black;
 }
 .body-listener{
-    height: 96vh;
+    height: 100vh;
     width: 97vw;
     background-color: #FFA500;
     margin: 0;
@@ -18,9 +18,10 @@ body{
 
 .footer-wrapper-listener{ 
     height: 100px;
-    margin-top: 60px;
+    margin-top: 100px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+
 }
 
 .details-listener{
